@@ -1,0 +1,15 @@
+<script type="text/javascript" charset="utf-8">
+  $(document).ready(function() {
+    FB.api('/me/friends', function(response) {
+      friends = response.data;
+
+      $.post("<%= url_for(:action => 'friend_boxes') -%>", { 'uids': friends, 'me': myInfo.id },
+        function(data) {
+          $('#friends').html(data);
+      });
+    });
+  });
+</script>
+
+<div id="friends">
+</div>

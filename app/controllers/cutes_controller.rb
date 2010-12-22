@@ -1,0 +1,2 @@
+class CutesController < ApplicationController
+end

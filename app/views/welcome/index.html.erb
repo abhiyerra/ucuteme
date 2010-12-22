@@ -1,0 +1,37 @@
+<%= image_tag 'front-header.png', :align => 'right', :alt => "ucuteme" %>
+
+<div id="scenarios" class="span-24">
+  <div id="scenario1">
+    <%= image_tag 'scenario2.png' %>
+  </div>
+
+  <div id="scenario2" class="span-10">
+    <script src="http://static.ak.fbcdn.net/connect/en_US/core.js"></script>
+
+    <div>
+      <p><fb:login-button size="xlarge" v="2" onlogin="window.location='/session/login';" autologoutlink="true">Sign In with Facebook</fb:login-button></p>
+    </div>
+
+    <h2>Stages of Cute</h2>
+    <div class="stage span-7">
+      <%= image_tag 'cute.png', :alt => 'cute' %>
+      <p>You haven't cuted this person yet. Maybe you admire him or her. If so...</p>
+    </div>
+
+    <div class="stage span-7">
+      <%= image_tag 'unsure.png', :alt => 'unsure' %>
+      <p>...cute them! This is private. The other person has no idea that you have cuted them, but, the excitement happens when your admirer cutes you...</p>
+    </div>
+
+    <div class="stage span-7">
+      <%= image_tag 'cuted_back.png', :alt => 'unsure' %>
+      <p>...back! Because this is when you know that your admirer likes you too!</p>
+    </div>
+  </div>
+</div>
+
+<div id="bottom-image" class="span-24">
+  <%= image_tag 'front-bottom.png' %>
+</div>
+
+

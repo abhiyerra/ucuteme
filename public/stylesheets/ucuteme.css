@@ -1,0 +1,55 @@
+body {
+  background-color: #dcdcee;
+  font-family: 'Cantarell'; }
+
+.container {
+  -webkit-box-shadow: 5px 5px 5px #888;
+  -moz-box-shadow: 5px 5px 5px #888;
+  box-shadow: 5px 5px 5px #888;
+  background-color: white;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding: 0em;
+  width: 860px; }
+
+#content {
+  padding: 0.5em; }
+  #content #login-header {
+    width: 100%;
+    height: 100px; }
+    #content #login-header #logo {
+      float: left; }
+    #content #login-header #profile-box {
+      top: 0;
+      float: right; }
+      #content #login-header #profile-box #fb-bookmark {
+        display: none; }
+
+#details {
+  width: 100%; }
+  #details h2 {
+    font-size: 230%;
+    margin-bottom: 0.5em;
+    font-weight: bold; }
+  #details #stages {
+    padding-left: 1em;
+    float: left; }
+    #details #stages .stage {
+      float: left; }
+      #details #stages .stage img {
+        float: left; }
+      #details #stages .stage p {
+        float: left;
+        width: 80px;
+        font-size: 115%; }
+  #details #details-text {
+    float: left; }
+    #details #details-text p {
+      font-size: 130%; }
+
+#bottom-image {
+  padding: 0;
+  margin: 0; }
+  #bottom-image img {
+    padding: 0;
+    margin: 0; }

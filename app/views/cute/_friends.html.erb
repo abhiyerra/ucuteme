@@ -1,0 +1,77 @@
+<script type="text/javascript" charset="utf-8">
+  function friendBox(uid) {
+    this.xOffset = 5;
+    this.yOffset = 50;
+
+    $("#picture-" + uid).hover(function (e) {
+        this.img_title = this.title;
+        this.title = "";
+        var img_src = $(this).attr('img_src');
+        var desc = (this.img_title != "") ? "<h3>" + this.img_title + "</h3>" : "";
+        var image = (img_src) ? img_src : this.src;
+        $("body").append("<div id='pimg'><img src='" + image + "' alt='Image preview' />" + desc + "</div>");
+        $("#pimg").css("top", (e.pageY - xOffset) + "px").css("left", (e.pageX + yOffset) + "px");
+        $("#pimg").fadeIn(700);
+    }, function () {
+        this.title = this.img_title;
+        $("#pimg").remove();
+
+    });
+
+    $("#picture-" + uid).mousemove(function (e) {
+        $("#pimg").css("top", (e.pageY - xOffset) + "px").css("left", (e.pageX + yOffset) + "px");
+    });
+  }
+
+  function cuteClick(uid, name, cute) {
+    link_id = "#cute-box-holder-" + uid;
+
+    if(cute == true) {
+      // Cute link_id person.
+      $.get("<%= url_for(:action => 'new') -%>", { 'uid': uid, 'name': name },
+        function(data) {
+          $(link_id).fadeOut();
+          $(link_id).html(data);
+          $(link_id).fadeIn();
+        });
+    } else {
+      // Uncute link_id person.
+      $.get("<%= url_for(:action => 'destroy') -%>", { 'uid': uid, 'name': name },
+        function(data) {
+          $(link_id).fadeOut();
+          $(link_id).html(data);
+          $(link_id).fadeIn();
+      });
+    }
+
+    return false;
+  }
+
+</script>
+
+
+<% friends.each do |friend| %>
+  <div class="friend-box" id="friend-<%= friend['id'] -%>">
+    <img src="https://graph.facebook.com/<%= friend['id'] -%>/picture" id="picture-<%= friend['id'] -%>" class="pimg" img_src="https://graph.facebook.com/<%= friend['id'] -%>/picture?type=large" />
+    <br>
+    <fb:name uid="<%= friend['id'] -%>"></fb:name>
+    <%#= link_to v['name'], "http://graph.facebook.com/#{v['id']}" %>
+    <br>
+
+    <div id="cute-box-holder-<%= friend['id'] -%>">
+      <% if Cute.cuted?(session[:uid], friend['id']) %>
+        <% if Cute.cuted_back?(session[:uid], friend['id']) %>
+          <%= cuted_back_link friend['id'], friend['name'] %>
+        <% else %>
+          <%= unsure_link friend['id'], friend['name'] %>
+        <% end %>
+      <% else %>
+        <%= cute_link friend['id'], friend['name'] %>
+      <% end %>
+    </div>
+
+    <script type="text/javascript" charset="utf-8">
+      friendBox(<%= friend['id'] -%>); 
+    </script>
+  </div>
+<% end %>   
