@@ -47,3 +47,6 @@ Ucuteme::Application.configure do
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
 end
+
+FB_APP_ID = '117687948264801'
+FB_SECRET = '8900aaae1c6920b0147de8d71fc2bb09'

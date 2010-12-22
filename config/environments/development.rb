@@ -24,3 +24,5 @@ Ucuteme::Application.configure do
   config.action_dispatch.best_standards_support = :builtin
 end
 
+FB_APP_ID = '36641106693'
+FB_SECRET = 'e56ae8f823305fffbcb8257c58e32e8e'
