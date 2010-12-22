@@ -13,34 +13,37 @@
       <%= stylesheet_link_tag 'blueprint/print', :media => "print" %>
       <!--[if lt IE 8]>
         <%= stylesheet_link_tag 'blueprint/ie', :media => "screen, projection" %>
-      <![endif]--> 
+      <![endif]-->
 
       <%= stylesheet_link_tag 'ucuteme', :media => "screen, projection" %>
     <% end %>
 
     <link href='http://fonts.googleapis.com/css?family=Cantarell' rel='stylesheet' type='text/css'>
 
-    <script src="http://www.google.com/jsapi"></script> 
-    <script> 
-      google.load("jquery", "1.4.2");
-    </script> 
-    <script src="http://connect.facebook.net/en_US/all.js" type="text/javascript"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+    <script type="text/javascript" src="http://connect.facebook.net/en_US/all.js"></script>
+
+    <% if Rails.env == 'development' %>
+      <script type="text/javascript" src="http://static.ak.fbcdn.net/connect/en_US/core.debug.js"></script>
+    <% end %>
+
+    <%= render :partial => "shared/facebook" %>
+
     <%= javascript_include_tag 'application' %>
 
     <title>ucuteme</title>
   </head>
 
   <body>
-    <%= render :partial => "shared/google_analytics" %>
-
     <div class="container">
-      <%= yield :layout %>  
+      <%= yield :layout %>
     </div>
 
     <div id="footer">
       &copy; 2010 ucuteme. All rights reserved.
     </div>
 
-    <%= render :partial => "shared/facebook" %>
+
+    <%= render :partial => "shared/google_analytics" %>
   </body>
 </html>

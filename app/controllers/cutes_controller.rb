@@ -1,17 +1,6 @@
 class CutesController < ApplicationController
   layout "application", :except => [:friend_boxes, :login, :logout]
 
-  before_filter :logged_in
-
-  def index
-    http = Net::HTTP.new('graph.facebook.com', 443)
-    http.use_ssl = true
-    path = "/me/friends?access_token=#{session[:access_token]}"
-    resp, data = http.get(path, nil)
-
-    @friends = JSON.parse(data)['data']
-  end
-
   def events
   end
 

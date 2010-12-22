@@ -2,40 +2,29 @@
   <script type="text/javascript" charset="utf-8">
     var myInfo;
 
-    $(document).ready(function() {
-      // Load infomation.
-      $("#fb-bookmark").show();
+    function userInfo(response) {
+      myInfo = response;
+      $("#fb-name").text("Hi, " + myInfo.name + "!");
+    }
 
-        // Load Activity Stream.
-        $("#activities").poll({
-          url: "/user/activity_stream",
-          interval: 3000,
-          type: "GET",
-          success: function(data){
-            $("#activities").prepend(data);
-          }
-        });
+    $(document).ready(function() {
+      $("#fb-bookmark").show();
+      FB.api('/me', userInfo);
     });
   </script>
 
   <div id="login-header">
     <div id="logo">
-      <%= image_tag 'logo.png' %>  
+      <%= image_tag 'logo.png' %>
     </div>
 
     <div id="profile-box">
-      <span>Hi <%= RedisDB.get "name:#{session[:uid]}" %>!</span>
-      <%= link_to 'Logout', :controller => 'session', :action => 'destroy' %>
+      <span id="fb-name"></span>
       <span id="fb-bookmark">
         <fb:bookmark type="off-facebook"></fb:bookmark>
       </span>
     </div>
   </div>
 
-  <div id="activities">
-  </div>
-
-  <div id="friends">
-    <%= render :partial => "cute/friends", :locals => { :friends => @friends } %>
-  </div>
+  <%= render :partial => "friends" %>
 </div>

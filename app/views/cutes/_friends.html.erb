@@ -1,4 +1,9 @@
+<div id="friends">
+</div>
+
 <script type="text/javascript" charset="utf-8">
+  var myFriends;
+
   function friendBox(uid) {
     this.xOffset = 5;
     this.yOffset = 50;
@@ -47,31 +52,21 @@
     return false;
   }
 
+  function addFriendBox(friend) {
+
+  }
+
+  function userFriends(response) {
+    myFriends = response;
+
+    friends = myFriends.data
+    for(i = 0; i < friends.length; i++) {
+      $("#friends").append(friends[i]).name);
+    }
+  }
+
+  $(document).ready(function() {
+    FB.api('/me/friends', userFriends);
+  });
 </script>
 
-
-<% friends.each do |friend| %>
-  <div class="friend-box" id="friend-<%= friend['id'] -%>">
-    <img src="https://graph.facebook.com/<%= friend['id'] -%>/picture" id="picture-<%= friend['id'] -%>" class="pimg" img_src="https://graph.facebook.com/<%= friend['id'] -%>/picture?type=large" />
-    <br>
-    <fb:name uid="<%= friend['id'] -%>"></fb:name>
-    <%#= link_to v['name'], "http://graph.facebook.com/#{v['id']}" %>
-    <br>
-
-    <div id="cute-box-holder-<%= friend['id'] -%>">
-      <% if Cute.cuted?(session[:uid], friend['id']) %>
-        <% if Cute.cuted_back?(session[:uid], friend['id']) %>
-          <%= cuted_back_link friend['id'], friend['name'] %>
-        <% else %>
-          <%= unsure_link friend['id'], friend['name'] %>
-        <% end %>
-      <% else %>
-        <%= cute_link friend['id'], friend['name'] %>
-      <% end %>
-    </div>
-
-    <script type="text/javascript" charset="utf-8">
-      friendBox(<%= friend['id'] -%>); 
-    </script>
-  </div>
-<% end %>   
