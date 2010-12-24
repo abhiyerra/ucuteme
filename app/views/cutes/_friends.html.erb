@@ -53,15 +53,40 @@
   }
 
   function addFriendBox(friend) {
+    var divBox = "";
+    divBox += '<div class="friend-box" id="friend-' + friend.id + '">';
+    divBox += '<img src="https://graph.facebook.com/' + friend.id + '/picture" id="picture-' + friend.id + '" class="pimg" img_src="https://graph.facebook.com/' + friend.id + '/picture?type=large" />';
+    divBox += '<br>';
+    divBox += '<fb:name uid="' + friend.id + '"></fb:name>';
+    divBox += '<br>';
 
+
+/*
+    <div id="cute-box-holder-<%#= friend['id'] -%>">
+      <%# if Cute.cuted?(session[:uid], friend['id']) %>
+        <%# if Cute.cuted_back?(session[:uid], friend['id']) %>
+          <%#= cuted_back_link friend['id'], friend['name'] %>
+        <%# else %>
+          <%#= unsure_link friend['id'], friend['name'] %>
+        <%# end %>
+      <%# else %>
+        <%#= cute_link friend['id'], friend['name'] %>
+      <%# end %>
+    </div>
+*/
+
+    divBox += '</div>';
+
+    $("#friends").append(divBox);
+    friendBox(friend.id);
   }
 
   function userFriends(response) {
     myFriends = response;
 
-    friends = myFriends.data
+    friends = myFriends.data;
     for(i = 0; i < friends.length; i++) {
-      $("#friends").append(friends[i]).name);
+      addFriendBox(friends[i]);
     }
   }
 
@@ -69,4 +94,3 @@
     FB.api('/me/friends', userFriends);
   });
 </script>
-
