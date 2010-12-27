@@ -10,3 +10,17 @@
     </span>
   </div>
 </div>
+
+<script type="text/javascript" charset="utf-8">
+  var myInfo;
+
+  function userInfo(response) {
+    myInfo = response;
+    $("#fb-name").text("Hi, " + myInfo.name + "!");
+  }
+
+  $(document).ready(function() {
+    $("#fb-bookmark").show();
+    FB.api('/me', userInfo);
+  });
+</script>
