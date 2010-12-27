@@ -7,6 +7,10 @@ Ucuteme::Application.routes.draw do
   match 'cute' => 'cutes#new'
   match 'uncute' => 'cutes#destroy'
 
+  match 'u/:user_id' => 'user#show'
+
+  resources :user
+
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action

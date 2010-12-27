@@ -1,4 +1,5 @@
 <div id="friends">
+Loading...
 </div>
 
 <script type="text/javascript" charset="utf-8">
@@ -57,7 +58,7 @@
     divBox += '<div class="friend-box" id="friend-' + friend.id + '">';
     divBox += '<img src="https://graph.facebook.com/' + friend.id + '/picture" id="picture-' + friend.id + '" class="pimg" img_src="https://graph.facebook.com/' + friend.id + '/picture?type=large" />';
     divBox += '<br>';
-    divBox += '<fb:name uid="' + friend.id + '"></fb:name>';
+    divBox += '<a href="/u/' + friend.id + '">' + friend.name + '</a>';
     divBox += '<br>';
 
 
@@ -85,11 +86,13 @@
     myFriends = response;
 
     friends = myFriends.data;
+    $("#friends").text("");
+
     for(i = 0; i < friends.length; i++) {
       addFriendBox(friends[i]);
     }
 
-    FB.XFBML.parse();
+//    FB.XFBML.parse();
   }
 
   $(document).ready(function() {

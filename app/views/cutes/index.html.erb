@@ -13,18 +13,7 @@
     });
   </script>
 
-  <div id="login-header">
-    <div id="logo">
-      <%= image_tag 'logo.png' %>
-    </div>
+  <%= render :partial => "shared/login_header" %>
 
-    <div id="profile-box">
-      <span id="fb-name"></span>
-      <span id="fb-bookmark">
-        <fb:bookmark type="off-facebook"></fb:bookmark>
-      </span>
-    </div>
-  </div>
-
-  <%= render :partial => "friends" %>
+  <%= render :partial => "user/friends" %>
 </div>
