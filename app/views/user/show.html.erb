@@ -1,3 +1,27 @@
 <div id="content">
   <%= render :partial => "shared/login_header" %>
+
+  <script type="text/javascript">
+    var user;
+    function profileInfo(u) {
+      user = u;
+
+      // Add picture.
+      $("#user-picture").append('<img src="https://graph.facebook.com/' + user.id + '/picture?type=large" id="picture-' + user.id + '" />');
+
+      // Adding profile information.
+      $("#user-info").append("<h2>" + user.name + "</h2>");
+//      $("#user-info").append("<p>" + user.bio + "</p>");
+    }
+
+    $(document).ready(function() {
+      FB.api('/<%= params[:user_id] %>', profileInfo);
+    });
+  </script>
+
+  <div id="user-picture">
+  </div>
+
+  <div id="user-info">
+  </div>
 </div>
