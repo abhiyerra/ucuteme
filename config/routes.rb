@@ -2,12 +2,11 @@ Ucuteme::Application.routes.draw do
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
-  match 'session/create' => 'session#create'
-  match 'cutes' => 'cutes#index'
-  match 'cute' => 'cutes#new'
-  match 'uncute' => 'cutes#destroy'
-
-  match 'u/:user_id' => 'user#show'
+  match 'cutes'          => 'cutes#index'
+  match 'cute'           => 'cutes#new'
+  match 'uncute'         => 'cutes#destroy'
+  match 'invite'         => 'user#invite'
+  match 'u/:user_id'     => 'user#show'
 
   resources :user
 
