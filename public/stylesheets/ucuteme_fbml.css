@@ -1,197 +1,105 @@
-/* Copied from blueprint/screen.css */
-html {
-  font-size: 100.01%; }
+/*
+Syntax error: Invalid CSS after "white": expected expression (e.g. 1px, bold), was ";"
+        on line 56 of /Users/abhi/Dropbox/ucuteme/ucuteme/public/stylesheets/sass/ucuteme_fbml.sass
 
-body {
-  font-size: 75%;
-  color: #222;
-  background: #fff;
-  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif; }
+51: .top {margin-top:0;padding-top:0;}
+52: .bottom {margin-bottom:0;padding-bottom:0;}
+53: 
+54: /* fbml.css */
+55: body {
+56:   background-color: white;
+57:   margin: 0;
+58:   padding: 0;
+59: }
+60: 
+61: .container {
 
-h1, h2, h3, h4, h5, h6 {
-  font-weight: normal;
-  color: #111; }
-
-h1 {
-  font-size: 3em;
-  line-height: 1;
-  margin-bottom: 0.5em; }
-
-h2 {
-  font-size: 2em;
-  margin-bottom: 0.75em; }
-
-h3 {
-  font-size: 1.5em;
-  line-height: 1;
-  margin-bottom: 1em; }
-
-h4 {
-  font-size: 1.2em;
-  line-height: 1.25;
-  margin-bottom: 1.25em; }
-
-h5 {
-  font-size: 1em;
-  font-weight: bold;
-  margin-bottom: 1.5em; }
-
-h6 {
-  font-size: 1em;
-  font-weight: bold; }
-
-h1 img, h2 img, h3 img, h4 img, h5 img, h6 img {
-  margin: 0; }
-
-p {
-  margin: 0 0 1.5em; }
-
-p img.left {
-  float: left;
-  margin: 1.5em 1.5em 1.5em 0;
-  padding: 0; }
-
-p img.right {
-  float: right;
-  margin: 1.5em 0 1.5em 1.5em; }
-
-a:focus, a:hover {
-  color: #000; }
-
-a {
-  color: #009;
-  text-decoration: underline; }
-
-blockquote {
-  margin: 1.5em;
-  color: #666;
-  font-style: italic; }
-
-strong {
-  font-weight: bold; }
-
-em, dfn {
-  font-style: italic; }
-
-dfn {
-  font-weight: bold; }
-
-sup, sub {
-  line-height: 0; }
-
-abbr, acronym {
-  border-bottom: 1px dotted #666; }
-
-address {
-  margin: 0 0 1.5em;
-  font-style: italic; }
-
-del {
-  color: #666; }
-
-pre {
-  margin: 1.5em 0;
-  white-space: pre; }
-
-pre, code, tt {
-  font: 1em "andale mono", "lucida console", monospace;
-  line-height: 1.5; }
-
-li ul, li ol {
-  margin: 0; }
-
-ul, ol {
-  margin: 0 1.5em 1.5em 0;
-  padding-left: 3.333em; }
-
-ul {
-  list-style-type: disc; }
-
-ol {
-  list-style-type: decimal; }
-
-dl {
-  margin: 0 0 1.5em 0; }
-
-dl dt {
-  font-weight: bold; }
-
-dd {
-  margin-left: 1.5em; }
-
-table {
-  margin-bottom: 1.4em;
-  width: 100%; }
-
-th {
-  font-weight: bold; }
-
-thead th {
-  background: #c3d9ff; }
-
-th, td, caption {
-  padding: 4px 10px 4px 5px; }
-
-tr.even td {
-  background: #e5ecf9; }
-
-tfoot {
-  font-style: italic; }
-
-caption {
-  background: #eee; }
-
-.small {
-  font-size: .8em;
-  margin-bottom: 1.875em;
-  line-height: 1.875em; }
-
-.large {
-  font-size: 1.2em;
-  line-height: 2.5em;
-  margin-bottom: 1.25em; }
-
-.hide {
-  display: none; }
-
-.quiet {
-  color: #666; }
-
-.loud {
-  color: #000; }
-
-.highlight {
-  background: #ff0; }
-
-.added {
-  background: #060;
-  color: #fff; }
-
-.removed {
-  background: #900;
-  color: #fff; }
-
-.first {
-  margin-left: 0;
-  padding-left: 0; }
-
-.last {
-  margin-right: 0;
-  padding-right: 0; }
-
-.top {
-  margin-top: 0;
-  padding-top: 0; }
-
-.bottom {
-  margin-bottom: 0;
-  padding-bottom: 0; }
-
-/* fbml.css */
-body {
-  background-color: white;
-  margin: 0;
-  padding: 0; }
-
-.container {
-  width: 700px; }
+Backtrace:
+/Users/abhi/Dropbox/ucuteme/ucuteme/public/stylesheets/sass/ucuteme_fbml.sass:56
+/Library/Ruby/Gems/1.8/gems/haml-3.0.24/lib/sass/scss/parser.rb:838:in `expected'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.24/lib/sass/script/lexer.rb:193:in `expected!'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.24/lib/sass/script/parser.rb:392:in `assert_done'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.24/lib/sass/script/parser.rb:50:in `parse'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.24/lib/sass/script/parser.rb:120:in `parse'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.24/lib/sass/script.rb:32:in `parse'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.24/lib/sass/engine.rb:672:in `parse_script'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.24/lib/sass/engine.rb:470:in `parse_property'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.24/lib/sass/engine.rb:459:in `parse_property_or_rule'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.24/lib/sass/engine.rb:440:in `parse_line'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.24/lib/sass/engine.rb:328:in `build_tree'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.24/lib/sass/engine.rb:347:in `append_children'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.24/lib/sass/engine.rb:346:in `each'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.24/lib/sass/engine.rb:346:in `append_children'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.24/lib/sass/engine.rb:337:in `build_tree'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.24/lib/sass/engine.rb:330:in `each'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.24/lib/sass/engine.rb:330:in `build_tree'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.24/lib/sass/engine.rb:347:in `append_children'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.24/lib/sass/engine.rb:346:in `each'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.24/lib/sass/engine.rb:346:in `append_children'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.24/lib/sass/engine.rb:216:in `_to_tree'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.24/lib/sass/engine.rb:179:in `to_tree'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.24/lib/haml/util.rb:294:in `silence_haml_warnings'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.24/lib/sass/engine.rb:179:in `to_tree'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.24/lib/sass/files.rb:44:in `tree_for'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.24/lib/sass/plugin.rb:220:in `update_stylesheet'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.24/lib/sass/plugin.rb:85:in `update_stylesheets'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.24/lib/sass/plugin.rb:78:in `each'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.24/lib/sass/plugin.rb:78:in `update_stylesheets'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.24/lib/sass/plugin.rb:76:in `each'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.24/lib/sass/plugin.rb:76:in `update_stylesheets'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.24/lib/sass/plugin.rb:50:in `check_for_updates'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.24/lib/sass/plugin/rack.rb:40:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/head.rb:14:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.2.1/lib/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/cookies.rb:295:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:32:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-3.0.3/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:12:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-3.0.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:353:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/callbacks.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
+/Library/Ruby/Gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.2.1/lib/rack/sendfile.rb:107:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/show_exceptions.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/railties-3.0.3/lib/rails/rack/logger.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.2.1/lib/rack/runtime.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/activesupport-3.0.3/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.2.1/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/static.rb:30:in `call'
+/Library/Ruby/Gems/1.8/gems/railties-3.0.3/lib/rails/application.rb:168:in `call'
+/Library/Ruby/Gems/1.8/gems/railties-3.0.3/lib/rails/application.rb:77:in `send'
+/Library/Ruby/Gems/1.8/gems/railties-3.0.3/lib/rails/application.rb:77:in `method_missing'
+/Library/Ruby/Gems/1.8/gems/railties-3.0.3/lib/rails/rack/log_tailer.rb:14:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.2.1/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.2.1/lib/rack/handler/webrick.rb:52:in `service'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/Library/Ruby/Gems/1.8/gems/rack-1.2.1/lib/rack/handler/webrick.rb:13:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.2.1/lib/rack/server.rb:213:in `start'
+/Library/Ruby/Gems/1.8/gems/railties-3.0.3/lib/rails/commands/server.rb:65:in `start'
+/Library/Ruby/Gems/1.8/gems/railties-3.0.3/lib/rails/commands.rb:30
+/Library/Ruby/Gems/1.8/gems/railties-3.0.3/lib/rails/commands.rb:27:in `tap'
+/Library/Ruby/Gems/1.8/gems/railties-3.0.3/lib/rails/commands.rb:27
+./script/rails:6:in `require'
+./script/rails:6
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Invalid CSS after \"white\": expected expression (e.g. 1px, bold), was \";\"\A         on line 56 of /Users/abhi/Dropbox/ucuteme/ucuteme/public/stylesheets/sass/ucuteme_fbml.sass\A \A 51: .top {margin-top:0;padding-top:0;}\A 52: .bottom {margin-bottom:0;padding-bottom:0;}\A 53: \A 54: /* fbml.css */\A 55: body {\A 56:   background-color: white;\A 57:   margin: 0;\A 58:   padding: 0;\A 59: }\A 60: \A 61: .container {"; }

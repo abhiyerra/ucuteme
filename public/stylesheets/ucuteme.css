@@ -1,16 +1,16 @@
 body {
   background-color: #dcdcee;
-  font-family: 'Cantarell'; }
+  font-family: "Cantarell"; }
 
 .container {
-  -webkit-box-shadow: 5px 5px 5px #888;
-  -moz-box-shadow: 5px 5px 5px #888;
-  box-shadow: 5px 5px 5px #888;
+  -webkit-box-shadow: 5px 5px 5px #888888;
+  -moz-box-shadow: 5px 5px 5px #888888;
+  box-shadow: 5px 5px 5px #888888;
   background-color: white;
   margin-top: 1em;
   margin-bottom: 1em;
   padding: 0em;
-  width: 860px; }
+  width: 800px; }
 
 #content {
   padding: 0.5em; }

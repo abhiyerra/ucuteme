@@ -1,7 +1,7 @@
 #scenarios #scenario1 {
   float: left;
-  padding-left: 1em;
-  padding-right: 1em; }
+    float-padding-left: 1em;
+    float-padding-right: 1em; }
 #scenarios #scenario2 {
   float: left; }
 
@@ -9,9 +9,9 @@
   background-color: #b1b1d9;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
-  -webkit-box-shadow: 1px 1px 1px #888;
-  -moz-box-shadow: 1px 1px 1px #888;
-  box-shadow: 1px 1px 1px #888;
+  -webkit-box-shadow: 1px 1px 1px #888888;
+  -moz-box-shadow: 1px 1px 1px #888888;
+  box-shadow: 1px 1px 1px #888888;
   padding: 0.5em;
   margin-right: 1em;
   margin-bottom: 1em;
@@ -41,8 +41,8 @@
   display: block;
   font-size: 16px;
   font-weight: bold;
-  color: #333;
+  color: #333333;
   text-align: center;
   margin-top: 10px;
-  border: 3px solid #999;
+  border: 3px solid #999999;
   background-color: #eeeeee; }
